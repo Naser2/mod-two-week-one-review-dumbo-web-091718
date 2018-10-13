@@ -1,4 +1,8 @@
-<%= form_for @sea do |f| %>
+<div class="text-center">
+  <h1 class="text-center">UPDATE</h1>
+</div>
+
+ <%= form_for @sea do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
 
@@ -24,5 +28,9 @@
   <%= f.check_box :has_mermaids %>
 
   <%=  f.submit %>
+
+  <button class="btn btn-danger" type="submit" style="margin: 1em" value="Delete"> <%= link_to "Delete", sea_path(@sea), method:"delete"%> </button>
+
+
 
   <% end %>
